@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   text-decoration: underline;
-  
+  padding: 15px 30px 15px 30px;
 } 
 
 .scores{
