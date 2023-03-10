@@ -50,6 +50,7 @@ function setTime() {
 function setnextQuestion(){
   resetstate()
   showQuestion()
+  
 }
 
 
