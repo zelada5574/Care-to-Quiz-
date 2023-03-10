@@ -10,20 +10,28 @@
   
   <body>
     <header class="headerbar">
-      <div class="scores">View Highscores</div>
+      <div class="highscore">View Highscores</div>
+      <div id ="score" class = "hide">Your score is: 0</div>
       <div>Time: <span id="timeleft"> 0</span></div>
     </header>
     <main class="container">
         <h1>Coding Time Tracker</h1>
-        <p>Try to answer the following code-related questions within the time limit. Keep in mind incorrect answers will penalize your score/time by ten seconds!</p>
-        <button class="btn hide">Answer1</button>
-        <button class="btn hide">Answer2</button>   
-        <button class="btn hide">Answer3</button>   
-        <button class="btn hide">Answer4</button>       
-        <button id="start">Start Quiz</button>
-        <button id="next" class="hide">Next</button>
+        <p id="question">Try to answer the following code-related questions within the time limit. Keep in mind incorrect answers will penalize your score/time by ten seconds!</p>
+        <div id="answergrid" class="hide">
+          <button class="btn-1 btn">Answer1</button>
+          <button class="btn-2 btn">Answer2</button>   
+          <button class="btn-3 btn">Answer3</button>   
+          <button class="btn-4 btn">Answer4</button>
+      </div>       
+        
+      <button id="start-btn" class="btn">Start Quiz</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
 
     </main>
+
+    <footer>
+      <p class = 'correctorwrong hide'> Did you get the question correct or wrong?</p>
+    </footer>
     
     <script src="./assets/js/script.js"></script>
   </body>
