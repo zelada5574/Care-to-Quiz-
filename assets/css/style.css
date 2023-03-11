@@ -90,7 +90,7 @@ footer {
   justify-content: center;
 }
 
-.correctorwrong {
+#correctorwrong {
   font-size: 2em;
   font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
   color: rgb(161, 154, 154);

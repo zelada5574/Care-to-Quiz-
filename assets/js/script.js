@@ -4,6 +4,7 @@ const answerscontainerEl = document.getElementById('answergrid')
 const questionEl = document.getElementById('question')
 const timerEl = document.getElementById('timeleft')
 const scoreEl = document.getElementById('score')
+const footerEl  = document.getElementById('correctorwrong')
 
 
 let currentQuestionIndex = 0;
@@ -50,7 +51,7 @@ function setTime() {
 function setnextQuestion(){
   resetstate()
   showQuestion()
-  
+
 }
 
 
@@ -62,7 +63,6 @@ for(let i=0; i<questions[currentQuestionIndex].answers.length; i++){
   const button = document.createElement('button')
     button.innerText = questions[currentQuestionIndex].answers[i]
     button.classList.add('btn')
-    button.addEventListener('click', selectAnswer)
     answerscontainerEl.appendChild(button)
 }
 
@@ -75,10 +75,13 @@ function resetstate() {
   }
 }
 
+answerscontainerEl.addEventListener('click', selectAnswer)
+
 function selectAnswer(){
-  if (answer === 2) {
-    button.dataset.correct = answer.correct
-  }
+  console.log('You chose...')
+  nextEl.classList.remove('hide')
+  footerEl.classList.remove('hide')
+  
 }
  
   
