@@ -21,15 +21,16 @@ body {
   padding: 15px 30px 15px 30px;
 } 
 
-.highscore{
+#highscore{
   color: rgb(44, 69, 184);
 }
 
-.highscore:hover{
+#highscore:hover{
   color: rgb(120, 3, 173);
+  cursor: pointer;
 }
 
-.container {
+#container {
   display: block;
   margin: 80px auto;
   text-align: center;
@@ -41,6 +42,11 @@ body {
 h1 {
   font-size: 2em;
 }
+
+.entry {
+  display: block;
+  padding: 15px 30px 15px 30px;
+} 
 
 #answergrid {
   margin-top: 50px;
