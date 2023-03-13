@@ -1,3 +1,4 @@
+// initialize variables
 const startEl = document.getElementById("start-btn");
 const nextEl = document.getElementById("next-btn");
 const answerscontainerEl = document.getElementById("answergrid");
@@ -11,9 +12,11 @@ const againEl = document.getElementById("again-btn");
 const highscoreEl = document.getElementById("highscore");
 const listingsEl = document.getElementById("listings");
 
+// set start lets to their values
 let currentQuestionIndex = 0;
 let score = 0;
 let secondsLeft = 75;
+
 
 // starts game when user hit the starts button and is presented with the first question
 // There should be a timer that starts at 75 seconds that begins to countdown
@@ -86,7 +89,7 @@ function showQuestion(question) {
       nextEl.classList.remove("hide");
       currentQuestionIndex++;
       if (currentQuestionIndex === 4) {
-        submitInitials;
+        submitInitials();
       }
     });
 
@@ -118,6 +121,7 @@ function submitInitials() {
   );
   if(!askInitials) {
     alert("Please enter your initials")
+    submitInitials()
   }
   let scoreEntry = document.createElement("p");
   scoreEntry.textContent = "User " + askInitials + " with a score of " + score;
@@ -125,6 +129,7 @@ function submitInitials() {
   scoreEntry.classList.add("entry");
   listingsEl.classList.remove('hide')
   againEl.classList.remove("hide");
+  footerEl.classList.add('hide')
 }
 
 // I need this function to run after submit initials
@@ -142,7 +147,8 @@ function viewHighscores() {
   listingsEl.classList.remove("hide");
 }
 
-againEl.addEventListener('click', startGame)
+againEl.addEventListener('click', startGame) 
+
 
 const questions = [
   {

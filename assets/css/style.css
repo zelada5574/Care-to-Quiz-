@@ -30,7 +30,7 @@ body {
   cursor: pointer;
 }
 
-#container {
+#container, #listings {
   display: block;
   margin: 80px auto;
   text-align: center;
@@ -38,6 +38,7 @@ body {
   width: 50vw;
   padding-top: 50px;
 }
+
 
 h1 {
   font-size: 2em;
@@ -94,6 +95,9 @@ h1 {
 footer {
   display: flex;
   justify-content: center;
+  border-width:2px;
+  border-style:solid;
+  border-color:black; 
 }
 
 #correctorwrong {
